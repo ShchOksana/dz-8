@@ -2,6 +2,14 @@ public class Student {
     private int studId;
     private String studName;
     private String studSurname;
+    private static int studIdUnique = 0;
+
+    public Student(String studName, String studSurname){
+        this.studId = ++studIdUnique;
+        this.studName = studName;
+        this.studSurname = studSurname;
+    }
+
 
     public int getStudId() {
         return studId;
